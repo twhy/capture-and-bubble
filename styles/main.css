@@ -1,0 +1,103 @@
+body { 
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Helvetica;
+  background-color: f8f8f8;
+}
+
+
+#large {
+  width: 400px;
+  height: 534px;
+}
+
+#medium {
+  width: 240px;
+  height: 320px;
+}
+
+#small {
+  width: 142px;
+  height: 191px;
+}
+
+#reset {
+  margin-top: 20px;
+}
+
+.baby::before,
+.baby::after {
+  top: 51%;
+  opacity: 0;
+  color: #fff;
+  width: 24px;
+  height: 42px;
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  border-radius: 4px;
+  transition-duration: .3s;
+  background: rgba(0, 0, 0, .9);  
+}
+
+#large.capture.baby::before {
+  transition-delay: .15s;
+}
+
+#medium.capture.baby::before {
+  transition-delay: .30s;
+}
+
+#small.capture.baby::before {
+  transition-delay: .45s;
+}
+
+#large.bubble.baby::after {
+  transition-delay: 1.05s;
+}
+
+#medium.bubble.baby::after {
+  transition-delay: .90s;
+}
+
+#small.bubble.baby::after {
+  transition-delay: .75s;
+} 
+
+.capture.baby::before,
+.bubble.baby::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.baby::before {
+  left: 20%;
+  content: '潜水';
+  transform: translateY(-8px);
+}
+
+.baby::after {
+  right: 20%;
+  content: '冒泡';
+  transform: translateY(8px);
+}
+
+.baby {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 4px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/baby-min.png);
+}
