@@ -33,7 +33,8 @@ function onBubble() {
   this.classList && this.classList.add('bubble');
 }
 
-document.querySelector('#reset').addEventListener('click', function() {
+document.querySelector('#reset').addEventListener('click', function(event) {
+  event.stopPropagation();
   document.querySelectorAll('.capture, .bubble').forEach(function(element) {
     element.classList.remove('capture', 'bubble');
   });
