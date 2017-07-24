@@ -45,7 +45,7 @@ body {
   position: absolute;
   border-radius: 4px;
   transition-duration: .3s;
-  background: rgba(0, 0, 0, .9);  
+  background: rgba(0, 0, 0, .8);
 }
 
 #large.capture.baby::before {
